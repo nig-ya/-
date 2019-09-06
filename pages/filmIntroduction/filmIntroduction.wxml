@@ -1,0 +1,45 @@
+<view class='film' wx:if="{{hasFilm}}">
+  <!-- 电影信息 -->
+  <view class='film-msg'>
+    <view class='film-msg-bg'>
+      <image class='film-bg' src='{{film.poster}}'></image>
+      <!-- 海报封面 -->
+      <image class='film-poster' src='{{film.poster}}' mode='aspectFit'></image>
+      <view class='film-title'>{{film.title}}</view>
+      <view class='film-other-title'>{{film.also_known_as}}</view>
+       <!-- 影片评分 -->
+      <view class='film-rating'>{{film.rating < 0 ? 0 : film.rating}}</view>
+    </view>
+    <!-- 影片信息介绍 -->
+    <view class='film-msg-des'>
+      <view class='film-duration'>{{film.runtime == null ? '未知时长' : film.runtime}}</view>
+      <view class='film-type'>{{film.genres}}</view>
+      <view class='film-publishtime'>{{film.release_date}}</view>
+      <view class='film-des-title'>{{film.film_locations}}/{{film.language}}</view>
+    </view>
+  </view>
+  <!-- 电影简介 -->
+  <view class='film-intr' bindtap='updown'>
+    <text class="film-text {{isDown ? 'auto-height' : ''}}">{{film.plot_simple}}</text>
+    <text class="film-up-down fa {{isDown ? 'fa-angle-up' : 'fa-angle-down'}}"></text>
+  </view>
+  <!-- 演员列表 -->
+  <view class='film-actors'>
+    <scroll-view scroll-x class='film-cover-list'>
+      <view class='film-cover'>
+        <view>导演</view>
+        <image class='film-img' src='{{film.poster}}'></image>
+        <view class='actor-name'>{{film.directors}}</view>
+      </view>
+      <view class='film-cover' wx:for="{{actors}}" wx:key="{{index}}">
+        <view wx:if="{{index == 0}}">演员</view>
+        <image class='film-img' src='{{film.poster}}'></image>
+        <view class='actor-name'>{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 立即购票 -->
+  <view class='take-check' bindtap='takeCheck'>
+    立即购票
+  </view>
+</view>

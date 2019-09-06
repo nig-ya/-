@@ -1,0 +1,17 @@
+<view class="cinemas">
+  <!-- 当前定位城市 -->
+  <view class="cinemas-title" bindtap='backCitys'>
+    {{cinemas[0].cityName}}
+    <text class='fa fa-angle-down'></text>
+  </view>
+  <!-- 城市影院列表 -->
+  <view class="cinemas-list">
+    <view class="cinema-info" wx:for="{{cinemas}}" wx:key="{{item.id}}">
+    
+      <view id='{{item.id}}' class='navigator' bindtap='goMovie' data-cinemainfo = '{{item}}'>
+        <view class="cinema-name">{{item.cinemaName}}</view>
+        <view class="cinema-address">{{item.address}}</view>
+      </view>
+    </view>
+  </view>
+</view>

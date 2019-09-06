@@ -1,0 +1,8 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <image mode='center' class='split-line' src='../../public/saleGoods/border.png'></image>
+  <view class='login-title'>万达电影</view>
+  <button class="wxlogin" type="primary" open-type="getUserInfo" bindgetuserinfo="userinfo">微信账号快速登录</button>
+  
+  <button disabled='true' class="phonelogin" type="default" open-type="getUserInfo" bindgetuserinfo="userinfo">手机号登录</button>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/movie/movie.wxml-->
+<view class='movie'>
+<!-- 标题 -->
+  <view class='movie-title' bindtap="cinemas">
+    <!-- 地图定位图标 -->
+    <text class='fa fa-map-marker map-marker'></text>
+    <text class='movie-name'>{{cinema_info.name}}</text>
+    <!-- 右箭头图标 -->
+    <text class='fa fa-angle-right angle-right'></text>
+  </view>
+<!-- 轮播图 -->
+  <swiper
+    indicator-dots="true"
+    indicator-color="gray"
+    autoplay="{{autoplay}}"
+    interval="2000"
+    duration="500"
+  >
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+<!-- 列表 -->
+  <view class='movie-list'>
+    <view class='movie-item' wx:for="{{movies}}" wx:key="item.movieId" bindtap='movieDetail' id='{{item.movieId}}' data-info="{{item}}" data-index="{{index}}">
+      <view class='movie-img'>
+        <image class='movie-img-item' lazy-load="true"  src='{{item.pic_url}}'>
+        </image>
+      </view>
+      <view class='movie-info'>
+        <view class='movie-info-name'>{{item.movieName}}</view>
+        <view class='movie-info-des'>电影人生《人生百态》</view>
+        <view class='movie-info-joiner'>世事漫随流水，算来一梦浮生</view>
+      </view>
+      <text class='fa fa-angle-right angle-right-go'></text>
+      <view class='buyTrick' catchtap='buyTrick' data-index="{{index}}">购票</view>
+
+    </view>
+  </view>
+</view>

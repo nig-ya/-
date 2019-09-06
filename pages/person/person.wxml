@@ -1,0 +1,38 @@
+<view class='person'>
+  <!-- 头像显示区域 -->
+  <view class='person-header'>
+    <view class='person-avatar'>
+      <image class="avatar-img {{!islogin ? 'fa fa-user-circle-o' : ''}}" src='{{avatar}}'></image>
+    </view>
+    <view class='person-info'>
+      <view class='person-nickname' bindtap='login'>{{nickname}}</view>
+      <view class='person-wxid' wx:if="{{islogin}}">{{gender == 1 ? '男' : '女'}}</view>
+      <view class='person-wxid' wx:else></view>
+    </view>
+  </view>
+  <!-- 订单显示区域 -->
+  <view class='person-order'>
+    <!-- 影片订单 -->
+    <view class='movie-order'>
+      <text class='fa fa-film'></text>
+      <text class='movie-title'>影票订单</text>
+      <text class='fa fa-angle-right'></text>
+    </view>
+    <!-- 商品订单 -->
+    <view class='goods-order' bindtap='goodsOrderList'>
+      <text class='fa fa-gift'></text>
+      <text class='goods-title'>卖品订单</text>
+      <text class='fa fa-angle-right'></text>
+    </view>
+    <!-- 钱包 -->
+    <view class='wallet'>
+      <text class='fa fa-cc-paypal'></text>
+      <text class='wallet-title'>我的钱包</text>
+      <text class='fa fa-angle-right'></text>
+    </view>
+  </view>
+  <!-- 登录按钮 -->
+  <view class='person-login' wx:if="{{islogin}}">
+    <button bindtap="loginout" class='login-btn' plain="true" size='mini'>退出登录</button>
+  </view>
+</view>

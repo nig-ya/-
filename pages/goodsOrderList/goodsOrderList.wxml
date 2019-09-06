@@ -1,0 +1,31 @@
+<view class='goodsOrderList'>
+  <block wx:if="{{hasOrder}}">
+  <view id='{{index}}' bindtap='orderDetail' class='order-item' wx:for="{{goodsOrderList}}" wx:key="{{index}}">
+    <view class='order-item-title'>
+    <!-- 订单时间 -->
+      <text class='order-time'>订单号:{{index}}</text>
+    <!-- 订单状态 -->
+      <text class='order-status'>待支付</text>
+    </view>
+    <view class='order-list'>
+      <scroll-view scroll-x class='order-cover-list'>
+        <view class='order-cover' wx:for="{{item.orderData}}" wx:key="{{item.id}}">
+          <image class='order-pic' src='{{item.img}}'></image>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='order-fun'>
+      <view class='order-id'>{{item.orderTime}}</view>
+      <view id="{{index}}" class='order-cancel' catchtap='cancelOrder'>取消订单</view>
+      <view class='order-pay'>付款</view>
+    </view>
+    <view class='order-split'></view>
+  </view>
+  </block>
+  <block wx:else>
+    <view class='blank-page'>
+      <text class='fa fa-gift'></text>
+      <text>空空如也</text>
+    </view>
+  </block>
+</view>

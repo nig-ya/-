@@ -1,0 +1,26 @@
+<template name="cart">
+  <view class='pt-cart'>
+    <!-- 遮罩层 -->
+    <view class='pt-cart-mask'></view>
+    <!-- 列表 -->
+    <view class='pt-cart-list'>
+      <!-- 标题 -->
+      <view class='pt-cart-list-title'>
+        <view class='pt-cartlist-name'>已选商品</view>
+        <view class='pt-cartlist-clear' bindtap='clearCartlist'>清空购物车</view>
+      </view>
+      <!-- 列表内容 -->
+      <view class='pt-cart-list-content'>
+        <view class='pt-cart-item' wx:for="{{list}}">
+          <view class='pt-cart-item-name'>{{item.title}}</view>
+          <view class='pt-cart-item-price'>￥{{item.price}}</view>
+          <view class='pt-cart-item-count add-cart'>
+              <text class='fa fa-minus-circle' bindtap='cartAddMinus' data-goodsid="{{item.id}}" data-type="0"></text>
+              <text class='cart-count'>{{item.count}}</text>
+              <text class='fa fa-plus-circle' bindtap='cartAddMinus' data-goodsId="{{item.id}}" data-type="1"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,192 @@
+.cinema-info{
+  position: relative;
+}
+.cinema-name{
+  padding-left: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+}
+.cinema-address{
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  color: darkgray;
+  width: calc(100% - 150rpx);
+}
+.cinema-phone{
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  font-size: 0.8rem;
+  color: darkgray;
+}
+.fa-phone{
+  margin-right: 10rpx;
+}
+.cinema-tip{
+  margin-top: 20rpx;
+  background-color: #FCFBEB;
+  color: #9B8C6C;
+  font-size: 0.8rem;
+  padding: 20rpx;
+}
+.cinema-map{
+  width: 100rpx;
+  height: 100rpx;
+  /* background-color: lightblue; */
+  text-align: center;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 60rpx;
+  right: 15rpx;
+  color: darkgray;
+}
+.fa-map-marker{
+  font-size: 1.5rem;
+}
+.left-line{
+  border-left: 1px solid darkgray;
+  height: 80rpx;
+  width: 0rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 0rpx;
+}
+.slide-image{
+  width: 180rpx;
+  height: 260rpx;
+  transform-origin: center center;
+  transition: all 0.5s;
+  /* margin-left: 20rpx;
+  margin-right: 20rpx; */
+}
+.scaleBig{
+  /*
+  transform: scale(1.2); */
+  width: 216rpx;
+  height: 312rpx;
+}
+
+.swiperCover{
+  width: 100%;
+  position: relative;  
+}
+.bg-swiper{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 280rpx;
+  overflow: hidden;
+}
+.bg-img{
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+}
+swiper {
+  height: 370rpx;
+}
+.le-img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+.le-active {
+  transform: scale(1) translateY(30rpx);
+}
+.movie-name{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-top: 15rpx;
+  text-align: center;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 影厅信息 */
+.hall{
+
+}
+.hall-date{
+  position: relative;
+  padding-left: 50rpx;
+  background-color: #F4F4F4;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 0.8rem;
+}
+.hall-date::after{
+  content: '';
+  display: block;
+  width: 250rpx;
+  height: 0rpx;
+  border-top: 5rpx solid black;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  border-radius: 2.5rpx;
+}
+
+.hall-item{
+  height: 120rpx;
+  border-bottom: 1px solid lightgray;
+}
+.hall-item::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.hall-time{
+  float: left;
+  width: 25%;
+  text-align: center;
+  height: 100%;
+  line-height: 120rpx;
+}
+.hall-num{
+float: left;
+width: 35%;
+font-size: 0.8rem;
+margin-top: 20rpx;
+}
+.hall-num-info{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hall-num-no{
+  color: darkgray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hall-price{
+float: left;
+width: 15%;
+  color: #795F3C;
+  height: 100%;
+  line-height: 120rpx;
+}
+.hall-buy{
+float: right;
+width: 100rpx;
+height: 50rpx;
+padding:8rpx;
+margin-right: 30rpx;
+border-radius: 50rpx;
+text-align: center;
+background-color: #795F3C;
+color: white;
+font-size: 0.9rem;
+margin-top: 30rpx;
+}

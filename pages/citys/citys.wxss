@@ -1,0 +1,33 @@
+.citys{
+  font-size: 0.9em;
+}
+.curCityTip{
+  color:darkgrey;
+  padding-left: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.curCity{
+  color: black;
+}
+
+.city-pre{
+  color:black;
+  padding-left: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #f3f3f3;
+}
+.city-list{
+  display: flex;
+  flex-wrap:wrap;
+  /* padding-left: 20rpx; */
+}
+.city{
+  height: 100rpx;
+  line-height: 100rpx;
+  flex: 0 0 160rpx;
+}
+navigator{
+  padding-left: 20rpx;
+}

@@ -1,0 +1,105 @@
+page{
+  height: 100%;
+}
+.goodsOrderList{
+  height: 100%;
+}
+.blank-page{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: darkgrey;
+}
+.order-item{
+  position: relative;
+  height: 380rpx;
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+}
+.order-item-title{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px dotted lightgray;
+  font-size: 0.8rem;
+}
+.order-time{
+  color: darkgray;
+}
+.order-status{
+  float: right;
+  color: #D3A163;
+}
+/* scroll-view的父元素 */
+.order-list{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* scroll-view */
+.order-cover-list{
+  height: 150rpx;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1px dotted lightgray;
+}
+/* scroll-view的子元素 */
+.order-cover{
+  display: inline-block;
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.order-pic{
+  width: 100%;
+  height: 100%;
+}
+.order-fun{
+  position: relative;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+}
+.order-id{
+  position: absolute;
+  font-size: 0.8rem;
+  color: darkgray;
+}
+.order-cancel{
+  position: absolute;
+  right: 150rpx;
+  font-size: 0.8rem;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius: 55rpx;
+  text-align: center;
+  color: #D3A163;
+  background-color: white;
+  border: 1px solid #D3A163;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+.order-pay{
+  position: absolute;
+  right: 0rpx;
+  font-size: 0.8rem;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius: 55rpx;
+  text-align: center;
+  color: white;
+  background-color: #D3A163;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.order-split{
+  position: absolute;
+  bottom: 0px;
+  height: 20rpx;
+  width: 100%;
+  left: 0px;
+  background-color: #EFEFEF;
+}

@@ -1,0 +1,59 @@
+<view>
+  <!-- 影院信息 -->
+  <view class='cinema-info'>
+    <view class='cinema-name'>{{cinemaInfo.name}}</view>
+    <view class='cinema-address'>{{cinemaInfo.address}}</view>
+    <view class='cinema-phone'>
+      <text class='fa fa-phone'></text>
+      <text>{{cinemaInfo.telephone}}</text>
+    </view>
+    <view class='cinema-tip'>BOLLBY CINEMA杜比影院、MAX4D厅为特殊上次，小朋友也需要购票呦~</view>
+    <view class='cinema-map' bindtap='showInMap'>
+      <text class="fa fa-map-marker"></text>
+      <view>地图</view>
+      <view class='left-line'></view>
+    </view>
+  </view>
+  <!-- 轮播选项卡 -->
+ <!-- swiper父容器 -->
+  <view class='swiperCover'>
+    <!-- swiper模糊背景显示 -->
+    <view class='bg-swiper'>
+      <image class='bg-img' src='{{cinemaList[nowIdx].pic_url}}'></image>
+    </view>
+    <!-- swiper显示 -->
+    <swiper display-multiple-items='3' previous-margin='30px'  next-margin='30px' bindchange="swiperChange" current="{{nowIdx}}">
+      <!-- 左站位 -->
+      <swiper-item>
+        <image  class="slide-image" />
+      </swiper-item>
+      <swiper-item wx:for='{{cinemaList}}' wx:key='{{index}}' bindtap="selectItem" data-index="{{index}}">
+          <!-- 动态等比例计算image的高度 -->
+          <image bindload='getHeight' style='height:{{swiperH}};' class='le-img {{nowIdx==index? "le-active":""}}' src='{{item.pic_url}}'  ></image>
+          <!-- 只显示当前的电影名字 -->
+          <view class='movie-name' wx:if="{{nowIdx==index}}">{{item.movieName}}</view>
+      </swiper-item>
+      <!-- 右站位 -->
+      <swiper-item>
+          <image  class="slide-image" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 影厅显示 -->
+  <view class='hall'>
+    <view class='hall-date'>今天 {{datetime}}</view>
+    <view class='hall-list'>
+      <view class='hall-item' wx:for="{{cinemaList[nowIdx].broadcast}}" wx:key="{{index}}">
+        <view class='hall-time'>{{item.time}}</view>
+        <view class='hall-num'>
+          <view class='hall-num-info'>
+            {{item.language}}{{item.type}}
+          </view>
+          <view class='hall-num-no'>{{item.hall}}</view>
+        </view>
+        <view class='hall-price'>￥{{item.price}}</view>
+        <view class='hall-buy'>购票</view>
+      </view>
+    </view>
+  </view>
+</view>

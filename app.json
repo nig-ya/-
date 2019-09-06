@@ -1,0 +1,56 @@
+{
+  "plugins": {
+    "myPlugin": {
+      "version": "1.0.6",
+      "provider": "wx5bc2ac602a747594"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "pages": [
+    "pages/citys/citys",
+    "pages/map/map",
+    "pages/cinemaMovieInfo/cinemaMovieInfo",
+    "pages/filmIntroduction/filmIntroduction",
+    "pages/product/product",
+    "pages/login/login",
+    "pages/movie/movie",
+    "pages/person/person",
+    "pages/goodsOrderList/goodsOrderList",
+    "pages/cinemas/cinemas",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#F1E921",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "public/tabbar_icon/movie_gray.png",
+        "selectedIconPath": "public/tabbar_icon/movie_gold.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "卖品",
+        "iconPath": "public/tabbar_icon/product_gray.png",
+        "selectedIconPath": "public/tabbar_icon/product_gold.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "public/tabbar_icon/person_gray.png",
+        "selectedIconPath": "public/tabbar_icon/person_gold.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
